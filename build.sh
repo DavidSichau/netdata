@@ -8,7 +8,7 @@ apt-get -qq -y install zlib1g-dev gcc make git autoconf autogen automake pkg-con
 
 # fetch netdata
 
-git clone https://github.com/firehol/netdata.git /netdata.git --depth=1
+git clone https://github.com/ktsaou/netdata.git /netdata.git --depth=1
 cd /netdata.git
 
 # use the provided installer
