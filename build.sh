@@ -21,7 +21,6 @@ cd /netdata.git
 
 groupadd docker
 gpasswd -a netdata docker
-systemctl restart docker
 # remove build dependencies
 
 cd /
