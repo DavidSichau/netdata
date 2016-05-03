@@ -17,8 +17,11 @@ cd /netdata.git
 
 ./netdata-installer.sh --dont-wait --dont-start-it
 #allow netdata to read docker sock
-mkdir -p /var/run/docker.sock
-chown netdata:netdata /var/run/docker.sock 
+
+
+groupadd docker
+gpasswd -a netdata docker
+systemctl restart docker
 # remove build dependencies
 
 cd /
