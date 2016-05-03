@@ -20,7 +20,7 @@ cd /netdata.git
 cd /
 rm -rf /netdata.git
 
-apt-get purge zlib1g-dev gcc make git autoconf autogen automake pkg-config
+apt-get purge -y zlib1g-dev gcc make git autoconf autogen automake pkg-config
 apt-get -y autoremove
 apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
