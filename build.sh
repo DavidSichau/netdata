@@ -3,7 +3,7 @@ set -e
 
 # install dependencies for build
 
-yum -y install zlib-devel gcc make git autoconf autogen automake pkg-config docker
+yum -y install zlib-devel gcc make git autoconf autogen automake pkg-config docker which date
 
 
 
