@@ -3,7 +3,7 @@ set -e
 
 # install dependencies for build
 
-yum -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config docker
+yum -y install zlib-devel gcc make git autoconf autogen automake pkg-config docker
 
 
 
@@ -21,7 +21,7 @@ cd /netdata.git
 cd /
 rm -rf /netdata.git
 
-yum remove -y zlib1g-dev gcc make git autoconf autogen automake pkg-config wget
+yum remove -y zlib-devel gcc make git autoconf autogen automake pkg-config wget
 yum autoremove
 rm -rf /tmp/* /var/tmp/*
 
