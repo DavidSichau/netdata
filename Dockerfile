@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:latest
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -qq update
 
