@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum update
+RUN yum -y update
 
 ADD build.sh /build.sh
 ADD run.sh /run.sh
