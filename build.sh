@@ -12,9 +12,8 @@ yum -y install zlib-devel gcc make git autoconf autogen automake pkg-config dock
 git clone https://github.com/firehol/netdata.git /netdata.git --depth=1
 cd /netdata.git
 
-#add netdata user to docker group
-usermod -aG docker netdata
-
+#allow netdata to read docker sock
+chown netdata:netdata /var/run/docker.sock 
 # use the provided installer
 
 ./netdata-installer.sh --dont-wait --dont-start-it
