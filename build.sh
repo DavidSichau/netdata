@@ -4,7 +4,7 @@ DEBIAN_FRONTEND=noninteractive
 
 # install dependencies for build
 
-apt-get -qq -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config 
+apt-get -qq -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config wget
 
 #install docker
 wget -qO- https://get.docker.com/ | sh
@@ -23,7 +23,7 @@ cd /netdata.git
 cd /
 rm -rf /netdata.git
 
-apt-get purge -y zlib1g-dev gcc make git autoconf autogen automake pkg-config
+apt-get purge -y zlib1g-dev gcc make git autoconf autogen automake pkg-config wget
 apt-get -y autoremove
 apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
