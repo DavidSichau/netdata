@@ -4,7 +4,10 @@ DEBIAN_FRONTEND=noninteractive
 
 # install dependencies for build
 
-apt-get -qq -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config docker
+apt-get -qq -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config 
+
+#install docker
+wget -qO- https://get.docker.com/ | sh
 
 # fetch netdata
 
