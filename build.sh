@@ -1,13 +1,11 @@
 #!/bin/bash
 set -e
-DEBIAN_FRONTEND=noninteractive
 
 # install dependencies for build
 
-apt-get -qq -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config wget
+yum -y install zlib1g-dev gcc make git autoconf autogen automake pkg-config docker
 
-#install docker
-wget -qO- https://get.docker.com/ | sh
+
 
 # fetch netdata
 
@@ -23,10 +21,9 @@ cd /netdata.git
 cd /
 rm -rf /netdata.git
 
-apt-get purge -y zlib1g-dev gcc make git autoconf autogen automake pkg-config wget
-apt-get -y autoremove
-apt-get clean
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+yum remove -y zlib1g-dev gcc make git autoconf autogen automake pkg-config wget
+yum autoremove
+rm -rf /tmp/* /var/tmp/*
 
 
 # symlink access log and error log to stdout/stderr
