@@ -1,6 +1,6 @@
-FROM ubuntu:latest
+FROM centos:7
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -qq update
+RUN yum update
 
 ADD build.sh /build.sh
 ADD run.sh /run.sh
