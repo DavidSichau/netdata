@@ -22,7 +22,7 @@ cd /
 rm -rf /netdata.git
 
 yum remove -y zlib-devel gcc make git autoconf autogen automake pkg-config wget
-yum autoremove
+yum autoremove -y
 rm -rf /tmp/* /var/tmp/*
 
 
