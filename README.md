@@ -10,7 +10,7 @@ More info about project: https://github.com/firehol/netdata
 # Using
 
 ```
-docker run -d --cap-add SYS_PTRACE --name netdata -v /proc:/host/proc:ro -v /sys:/host/sys:ro -p 19999:19999 titpetric/netdata
+docker run -d --cap-add SYS_PTRACE --name netdata -v /proc:/host/proc:ro -v /sys:/host/sys:ro -v /var/run/docker.sock:/var/run/docker.sock -p 19999:19999 titpetric/netdata
 ```
 
 Open a browser on http://server:19999/ and watch how your server is doing.
